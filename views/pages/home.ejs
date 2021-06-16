@@ -1,0 +1,18 @@
+<%- include('../common/head.ejs') %> 
+<%- include('../common/nav.ejs') %> 
+<h1>I am home page</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, quod!</p>
+
+<% if(isShow) { %>  
+    <% for(let i = 0 ; i<data.length; i++) { %> 
+        <div class="box">
+            <h5><%= data[i].name %> (<%= data[i].dep %>)  </h5>
+        </div>
+    <% } %>
+<% }else { %>
+    <div class="">
+        <h3>Sorry, there has no name yet!</h3>
+    </div>
+<% } %> 
+
+<%- include('../common/footer.ejs') %> 
